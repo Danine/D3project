@@ -12,6 +12,7 @@
 <body>
     <script type="text/javascript">
         var chart = d3.parsets()
+            .tension(0.5)
             .dimensions(["Survived", "Sex", "Age", "Class"]);
 
         var vis = d3.select("body").append("svg")

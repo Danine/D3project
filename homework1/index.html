@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ch">
+
+<head>
+    <meta charset="utf-8">
+    <title>homework1</title>
+    <script type="text/javascript" src="d3/d3.v3.js"></script>
+    <script type="text/javascript" src="d3-parsets/d3.parsets.js"></script>
+    <link rel="stylesheet" type="text/css" href="d3-parsets/d3.parsets.css">
+</head>
+
+<body>
+    <script type="text/javascript">
+        var chart = d3.parsets()
+            .tension(0.5)
+            .dimensions(["Sex", "Year", "Age", "People"]);
+
+        var vis = d3.select("body").append("svg")
+            .attr("width", chart.width())
+            .attr("height", chart.height());
+
+        d3.csv("census2000.csv", function(error, csv) {
+        vis.datum(csv).call(chart);
+        });
+    </script>
+</body>
+</html>
