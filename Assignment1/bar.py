@@ -32,7 +32,10 @@ bar = Bar(title = "1900-2000", subtitle="男女人数比")
 bar.add("1900男", attr, v119)
 bar.add("1900女", attr, v219)
 bar.add("2000男", attr, v120)
-bar.add("2000女", attr, v220)
+bar.add("2000女", attr, v220,
+         xaxis_name = "年龄",
+         yaxis_name = "人口",
+         yaxis_name_gap = 70,)
 
 line1 = Line()
 line1.add("1900", attr, a19)
