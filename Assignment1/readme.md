@@ -3,7 +3,7 @@
 姓名：代荣森&nbsp;&nbsp;&nbsp;&nbsp;学号：201618130133  
 
 ## 图表
-![图1](\census.png)
+![图1](https://github.com/Danine/VisualizationProject/blob/master/Assignment1/census.png)
 ---
 ## 设计原理
 利用 **条形图** 和 **折线图**，在同一张表上体现出了每个年龄段的分布情况及变化情况，突出展现了以下几个问题：
