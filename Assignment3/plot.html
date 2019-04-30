@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .vega-actions a {
+        margin-right: 12px;
+        color: #757575;
+        font-weight: normal;
+        font-size: 13px;
+    }
+    .error {
+        color: red;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@4"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@3.2.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@3"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+      var spec = {"config": {"view": {"width": 400, "height": 300}, "mark": {"tooltip": null}}, "repeat": {"column": ["year"], "row": ["ticketSold", "total gross(Billion CNY)", "screen", "avgPrice"]}, "spec": {"layer": [{"data": {"name": "data-ab09972c3502b0629118f45583217fa1"}, "mark": "line", "encoding": {"color": {"type": "nominal", "field": "country"}, "x": {"type": "quantitative", "field": {"repeat": "column"}}, "y": {"type": "quantitative", "field": {"repeat": "row"}}}, "selection": {"selector002": {"type": "interval", "bind": "scales", "encodings": ["x", "y"]}}}, {"data": {"name": "data-ab09972c3502b0629118f45583217fa1"}, "mark": "point", "encoding": {"opacity": {"value": 0}, "x": {"type": "quantitative", "field": "year"}}, "selection": {"selector001": {"type": "single", "nearest": true, "on": "mouseover", "fields": ["year"], "empty": "none"}}}, {"data": {"name": "data-ab09972c3502b0629118f45583217fa1"}, "mark": "point", "encoding": {"color": {"type": "nominal", "field": "country"}, "opacity": {"value": 0, "condition": {"value": 1, "selection": "selector001"}}, "x": {"type": "quantitative", "field": {"repeat": "column"}}, "y": {"type": "quantitative", "field": {"repeat": "row"}}}}, {"data": {"name": "data-ab09972c3502b0629118f45583217fa1"}, "mark": {"type": "rule", "color": "gray"}, "encoding": {"x": {"type": "quantitative", "field": "year"}}, "transform": [{"filter": {"selection": "selector001"}}]}, {"data": {"name": "data-ab09972c3502b0629118f45583217fa1"}, "mark": {"type": "text", "align": "left", "dx": 5, "dy": -5}, "encoding": {"color": {"type": "nominal", "field": "country"}, "text": {"value": " ", "condition": {"type": "quantitative", "field": {"repeat": "row"}, "selection": "selector001"}}, "x": {"type": "quantitative", "field": {"repeat": "column"}}, "y": {"type": "quantitative", "field": {"repeat": "row"}}}}], "height": 300, "width": 600}, "$schema": "https://vega.github.io/schema/vega-lite/v3.2.1.json", "datasets": {"data-ab09972c3502b0629118f45583217fa1": [{"country": "China", "year": 2012, "ticketSold": 463260, "total gross(Billion CNY)": 165.634, "screen": 13118, "avgPrice": 36}, {"country": "China", "year": 2013, "ticketSold": 614240, "total gross(Billion CNY)": 214.7403, "screen": 18195, "avgPrice": 35}, {"country": "China", "year": 2014, "ticketSold": 834310, "total gross(Billion CNY)": 294.3042, "screen": 23592, "avgPrice": 35}, {"country": "China", "year": 2015, "ticketSold": 1260890, "total gross(Billion CNY)": 438.8045, "screen": 31627, "avgPrice": 35}, {"country": "China", "year": 2016, "ticketSold": 1373630, "total gross(Billion CNY)": 455.2044, "screen": 41056, "avgPrice": 33}, {"country": "Japan", "year": 2008, "ticketSold": 160491, "total gross(Billion CNY)": 117.291272, "screen": 3359, "avgPrice": 73}, {"country": "Japan", "year": 2009, "ticketSold": 169297, "total gross(Billion CNY)": 124.03307, "screen": 3396, "avgPrice": 73}, {"country": "Japan", "year": 2010, "ticketSold": 174358, "total gross(Billion CNY)": 132.883674, "screen": 3412, "avgPrice": 76}, {"country": "Japan", "year": 2011, "ticketSold": 144726, "total gross(Billion CNY)": 109.080594, "screen": 3339, "avgPrice": 75}, {"country": "Japan", "year": 2012, "ticketSold": 155159, "total gross(Billion CNY)": 117.50438, "screen": 3290, "avgPrice": 76}, {"country": "Japan", "year": 2013, "ticketSold": 155888, "total gross(Billion CNY)": 116.930674, "screen": 3318, "avgPrice": 75}, {"country": "Japan", "year": 2014, "ticketSold": 161116, "total gross(Billion CNY)": 124.634468, "screen": 3364, "avgPrice": 77}, {"country": "Japan", "year": 2015, "ticketSold": 166630, "total gross(Billion CNY)": 130.705638, "screen": 3437, "avgPrice": 78}, {"country": "Japan", "year": 2016, "ticketSold": 180189, "total gross(Billion CNY)": 141.775816, "screen": 3472, "avgPrice": 79}, {"country": "Japan", "year": 2017, "ticketSold": 174483, "total gross(Billion CNY)": 137.600344, "screen": 3525, "avgPrice": 79}, {"country": "SouthKorea", "year": 2008, "ticketSold": 147429, "total gross(Billion CNY)": 55.76429124, "screen": 2004, "avgPrice": 38}, {"country": "SouthKorea", "year": 2009, "ticketSold": 155399, "total gross(Billion CNY)": 62.82536829, "screen": 2055, "avgPrice": 40}, {"country": "SouthKorea", "year": 2010, "ticketSold": 147759, "total gross(Billion CNY)": 67.12077482, "screen": 2003, "avgPrice": 45}, {"country": "SouthKorea", "year": 2011, "ticketSold": 159725, "total gross(Billion CNY)": 71.67636892, "screen": 1974, "avgPrice": 45}, {"country": "SouthKorea", "year": 2012, "ticketSold": 194891, "total gross(Billion CNY)": 84.39814056, "screen": 2081, "avgPrice": 43}, {"country": "SouthKorea", "year": 2013, "ticketSold": 213351, "total gross(Billion CNY)": 89.97841511, "screen": 2184, "avgPrice": 42}, {"country": "SouthKorea", "year": 2014, "ticketSold": 215069, "total gross(Billion CNY)": 96.52548785, "screen": 2281, "avgPrice": 45}, {"country": "SouthKorea", "year": 2015, "ticketSold": 217300, "total gross(Billion CNY)": 99.49909116, "screen": 2424, "avgPrice": 46}, {"country": "SouthKorea", "year": 2016, "ticketSold": 217026, "total gross(Billion CNY)": 101.10527661, "screen": 2575, "avgPrice": 47}, {"country": "SouthKorea", "year": 2017, "ticketSold": 219873, "total gross(Billion CNY)": 101.88043807, "screen": 2766, "avgPrice": 46}, {"country": "US", "year": 2008, "ticketSold": 1358041, "total gross(Billion CNY)": 656.22475967, "screen": 38834, "avgPrice": 48}, {"country": "US", "year": 2009, "ticketSold": 1418601, "total gross(Billion CNY)": 716.03871672, "screen": 39233, "avgPrice": 50}, {"country": "US", "year": 2010, "ticketSold": 1328504, "total gross(Billion CNY)": 705.43157038, "screen": 39520, "avgPrice": 53}, {"country": "US", "year": 2011, "ticketSold": 1284606, "total gross(Billion CNY)": 685.58021328, "screen": 39580, "avgPrice": 53}, {"country": "US", "year": 2012, "ticketSold": 1385368, "total gross(Billion CNY)": 742.15275265, "screen": 39662, "avgPrice": 54}, {"country": "US", "year": 2013, "ticketSold": 1339874, "total gross(Billion CNY)": 733.11107376, "screen": 40024, "avgPrice": 55}, {"country": "US", "year": 2014, "ticketSold": 1257388, "total gross(Billion CNY)": 691.3637505, "screen": 39956, "avgPrice": 55}, {"country": "US", "year": 2015, "ticketSold": 1323315, "total gross(Billion CNY)": 750.76836721, "screen": 40006, "avgPrice": 57}, {"country": "US", "year": 2016, "ticketSold": 1301644, "total gross(Billion CNY)": 757.74590825, "screen": 40174, "avgPrice": 58}, {"country": "US", "year": 2017, "ticketSold": 1225308, "total gross(Billion CNY)": 739.82353592, "screen": 40393, "avgPrice": 60}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div class="error" style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+
+  </script>
+</body>
+</html>

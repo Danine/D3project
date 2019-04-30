@@ -1,6 +1,6 @@
 # Assignment 1  
 
-姓名：代荣森&nbsp;&nbsp;&nbsp;&nbsp;学号：201618130133  
+姓名：代荣森&nbsp;&nbsp;&nbsp;&nbsp;学号：201618130133
 
 ## 图表
 ![图1](https://github.com/Danine/VisualizationProject/blob/master/Assignment1/census.png)
