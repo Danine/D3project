@@ -5,6 +5,9 @@
 ## 图表链接
 http://tysondai.me/
 
+## 项目链接
+https://github.com/Danine/VisualizationProject/tree/master/Assignment3 
+
 ## 设计原理
 &emsp;&emsp;由于选择的数据集有关于10年来中日韩美四国的电影相关数据的发展，所以选择了最适合表示发展趋势的**Line Charts**作为基础，在其中增加交互技巧，从而完成本次任务。
 
