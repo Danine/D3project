@@ -1,5 +1,5 @@
 from pyecharts import options as opts
-from pyecharts.charts import Page, Tree
+from pyecharts.charts import Tree
 
 def tree_base() -> Tree:
     data = [
@@ -257,9 +257,9 @@ def tree_base() -> Tree:
     ]
 
     c = (
-        Tree(init_opts=opts.InitOpts(width = "900px",height = "900px"))
+        Tree(init_opts=opts.InitOpts(width = "900px", height = "900px", page_title="filePath"))
         .add("", data, collapse_interval=3, layout="radial", symbol="emptyCircle", itemstyle_opts=opts.ItemStyleOpts(border_color="rgb(12, 12, 150)"))
-        .set_global_opts(title_opts = opts.TitleOpts(title="Radial Tree Layout"))
+        .set_global_opts(title_opts = opts.TitleOpts(title="本地磁盘C的文件路径"))
     )
     return c
 
